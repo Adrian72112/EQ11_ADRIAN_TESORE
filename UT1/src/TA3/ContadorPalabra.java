@@ -45,7 +45,9 @@ public class ContadorPalabra {
                 esPalabra = false;
             }
         }
-        if (esPalabra){
+        
+        // Esto chekea la ultima palabra que no termina en espacio
+        if (esPalabra && largo > minLargo){
             contador ++;
         }
         return contador;
