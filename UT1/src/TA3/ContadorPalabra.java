@@ -28,4 +28,26 @@ public class ContadorPalabra {
         }
         return contador;
     }
+    
+    public int cantidadLargoPalabra(int minLargo, String palabra){
+        boolean esPalabra = false;
+        int contador = 0 , largo = 0;
+        
+        for (char caracter: palabra.toCharArray()){
+            if (Character.isAlphabetic(caracter)){
+                esPalabra = true;
+                largo++;
+            }
+            if (caracter == ' ' && esPalabra){
+                if (largo > minLargo)
+                    contador++;
+                largo = 0;
+                esPalabra = false;
+            }
+        }
+        if (esPalabra){
+            contador ++;
+        }
+        return contador;
+    }
 }

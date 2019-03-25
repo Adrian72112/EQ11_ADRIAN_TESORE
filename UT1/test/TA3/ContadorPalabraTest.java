@@ -52,4 +52,19 @@ public class ContadorPalabraTest {
        // fail("The test case is a prototype.");
     }
     
+     /**
+     * Test of contadorPalabras method, of class ContadorPalabra.
+     */
+    @Test
+    public void testContadorMaxPalabras() {
+        System.out.println("contadorPalabras");
+        String palabra = "  9999  Hola como estas 123perro gato2 macri   gato   123sa  Adrian Tesore  ***";
+        ContadorPalabra instance = new ContadorPalabra();
+        int expResult = 2;
+        int largoMin = 5;
+        int result = instance.cantidadLargoPalabra(largoMin , palabra);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+       // fail("The test case is a prototype.");
+    }
 }
