@@ -37,7 +37,15 @@ public class Producto implements IProducto {
 
     @Override
     public void setStock(Integer stock) {
-        this.stock = stock;
+          if(this.stock >= 0){
+            this.stock += stock;
+        } else{
+            if(stock > this.stock){
+                this.stock = 0; //El stock no puede ser negativo
+            } else{
+                this.stock -= stock;
+            }
+        }
     }
 
     @Override
